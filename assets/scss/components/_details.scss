@@ -1,0 +1,51 @@
+.details {
+    height: calc(100vh - ( #{$header-height}) * 2.5);
+    min-height: 500px;
+    grid-template-columns: auto auto;
+    align-content: center;
+    justify-content: center;
+    margin-top: 2.5rem;
+
+    &__box {
+        margin-bottom: 2.5rem;
+        text-align: center;
+    }
+
+    &__initial {
+        font-size: var(--smaller-font-size);
+    }
+
+    &__title {
+        font-size: var(--bigger-font-size);
+
+        & span {
+            font-size: var(--big-font-size);
+        }
+    }
+
+    &__img { 
+        width: 100%;
+        padding-bottom: 100px; 
+        text-align: center;
+
+        & img {
+            width: 170px;
+            object-fit: contain;
+            margin: auto;
+        }
+    }
+
+}
+
+
+// Animation
+
+.airpod {
+    animation: airpod 3s infinite;
+
+    @keyframes airpod {
+        50% {
+            transform: translateY(-6%);
+        }
+    }
+}

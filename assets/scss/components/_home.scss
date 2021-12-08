@@ -1,0 +1,79 @@
+//  Home 
+
+.home {
+    height: calc(100vh - ( #{$header-height} * 3 ) );
+    min-height: 500px;
+    display: grid;
+    grid-template-rows: 1.5fr 1fr 1fr;
+    grid-template-areas: "data" "img" "scroll";
+    row-gap: 1.5rem;
+    background-color: $section-light;
+    border-radius: 18px;
+
+    &__data {
+        grid-area: data;
+        text-align: center;
+        padding-top: 3.5rem;
+    }
+
+    &__title {
+        font-size: var(--biggest-font-size);
+        font-weight: $font-regular;
+    }
+
+    &__description {
+        font-size: var(--normal-font-size);
+        padding: 0 1rem;
+    }
+
+    &__img {
+        grid-area: img;
+        display: flex;
+        justify-content: center;
+
+        & img {
+            width: 81px;
+            height: 177px;
+            margin-right: 1rem;
+            object-fit: contain;
+        }
+    }
+
+    &__scroll {
+        grid-area: scroll;
+        // align-self: flex-end;
+        padding-bottom: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-text {
+            display: block;
+            margin: 1rem;
+            font-size: var(--normal-font-size);
+        }
+    }
+}
+
+// Animation
+
+.airpod1 {
+    animation: airpod1 3s infinite;
+
+    @keyframes airpod1 {
+        50% {
+            transform: translateY(-6%);
+        }
+    }
+}
+
+.airpod2 {
+    animation: airpod2 3s infinite;
+
+    @keyframes airpod2 {
+        50% {
+            transform: translateY(6%);
+        }
+    }
+}
